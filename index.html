@@ -43,19 +43,10 @@
       <hr>
 
       <div ng-controller="ObjectArrayCtrl">
-        <h3>With an object array as input data</h3>
-
-        <dl>
-          <dt>Pros</dt>
-          <dd>add/remove is very easy</dd>
-
-          <dt>Cons</dt>
-          <dd>somewhat more complex data structure and toggling by name is cumbersome or requires a helper method</dd>
-        </dl>
 
         <div class="row">
           <div class="col-md-6">
-            <h4>selectables</h4>
+            <h4>new</h4>
             <div class="form-group">
               <label ng-repeat="class in classes" class="checkbox-inline">
                 <input type="checkbox" name="selectedClasses[]" value="{{className}}" ng-model="class.selected"> {{class.name}}
@@ -83,11 +74,11 @@
             <h4>selection using a helper function</h4>
             <pre>{{selectedClasses()|json}}</pre>
           </div>
-
+          <!--
           <div class="col-md-6">
             <h4>input</h4>
             <pre>{{classes|json}}</pre>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
