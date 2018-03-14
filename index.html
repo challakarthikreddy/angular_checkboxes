@@ -58,16 +58,6 @@
             <h4>selectables</h4>
             <div class="form-group">
               <label ng-repeat="class in classes" class="checkbox-inline">
-                <!--
-                  - use `value="{{class.name}}"` to give the input a real value, in case the form gets submitted
-                    traditionally
-
-                  - use `ng-checked="class.selected"` to have the checkbox checked based on some angular expression
-                    (no two-way-data-binding)
-
-                  - use `ng-model="class.selected"` to utilize two-way-data-binding. Note that `.selected`
-                    is arbitrary. The property name could be anything and will be created on the object if not present.
-                -->
                 <input type="checkbox" name="selectedClasses[]" value="{{className}}" ng-model="class.selected"> {{class.name}}
               </label>
             </div>

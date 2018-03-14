@@ -6,11 +6,12 @@
     $scope.classes = ['Maths', 'Physics', 'Telugu', 'Chemistry'];
 
     // selected classes
-    $scope.selection = ['Maths', 'Telugu'];
+    $scope.selection = [];
 
     // toggle selection for a given class by name
     $scope.toggleSelection = function toggleSelection(className) {
       var idx = $scope.selection.indexOf(className);
+      console.log(idx);
 
       // is currently selected
       if (idx > -1) {
@@ -27,9 +28,9 @@
   app.controller('ObjectArrayCtrl', ['$scope', 'filterFilter', function ObjectArrayCtrl($scope, filterFilter) {
     // classes
     $scope.classes = [
-      { name: 'Maths',    selected: true },
+      { name: 'Maths',    selected: false },
       { name: 'Physics',   selected: false },
-      { name: 'Telugu',     selected: true },
+      { name: 'Telugu',     selected: false },
       { name: 'Chemistry', selected: false }
     ];
 
